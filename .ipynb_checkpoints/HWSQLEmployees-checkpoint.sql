@@ -9,11 +9,7 @@ DROP TABLE IF EXISTS salaries;
 DROP TABLE IF EXISTS titles;
 
 -- Create tables, specify Data Types, Primary Keys & Foreign Keys 
-
--- I used www.quickdatabasediagrams.com.  Once I figured out from looking at the CSVs what were primary and foreign, 
--- and using the notation of "FK >-" as "Foreign Key, many to one", the site created the ERD and coding for "create table" and "alter table".  
-
--- Import CSV Files Into Corresponding SQL Table.  Recall need to import as UTF8 and comma delimited.  
+-- Import CSV Files Into Corresponding SQL Table
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR   NOT NULL,
@@ -83,7 +79,7 @@ REFERENCES "employees" ("emp_no");
 ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
--- Query all FROM Each Table 
+-- Query * FROM Each Table Confirming Data
 
 SELECT * FROM departments;
 SELECT * FROM dept_emp;
